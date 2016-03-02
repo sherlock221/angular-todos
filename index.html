@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <title>angularjs todos</title>
+    <script type="text/javascript" src="lib/angular.min.js"></script>
+    <link rel="stylesheet" href="app/css/main.css"/>
+
+    <script type="text/javascript" src="app/js/config.js"></script>
+    <script type="text/javascript" src="app/js/controller/app.ctrl.js"></script>
+    <script type="text/javascript" src="app/js/controller/appHeader.ctrl.js"></script>
+    <script type="text/javascript" src="app/js/controller/appFooter.ctrl.js"></script>
+    <script type="text/javascript" src="app/js/controller/appMain.ctrl.js"></script>
+    <script type="text/javascript" src="app/js/filter/filter.js"></script>
+</head>
+<body>
+
+<section ng-controller="AppController" class="panel">
+
+    <section ng-controller="AppHeaderController" ng-include="'./app/tpl/AppHeader.html'"></section>
+    <section ng-controller="AppMainController" ng-include="'./app/tpl/AppMain.html'"></section>
+    <section ng-controller="AppFooterController" ng-include="'./app/tpl/AppFooter.html'"></section>
+
+</section>
+
+
+</body>
+</html>

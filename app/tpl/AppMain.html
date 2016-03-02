@@ -1,0 +1,11 @@
+<div>
+
+    <ul class="todo-list">
+        <li ng-repeat="item in $root.todoList" ng-mouseenter="item.isOver = true;" ng-mouseleave="item.isOver = false;">
+            <input type="checkbox" ng-model="item.ck" ng-change="changeTodoStatus(todo)">
+            <span ng-style="{'textDecoration': item.ck ? 'line-through' : 'none'}">{{item.text}}</span>
+            <button type="button" ng-if="item.isOver" class="fr"  ng-click="removeTodo(item)">删除</button>
+        </li>
+    </ul>
+
+</div>
